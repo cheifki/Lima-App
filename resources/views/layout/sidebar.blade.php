@@ -24,12 +24,23 @@
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Product</span></a>
   </li>
-  
-  <li class="nav-item">
+
+<li class="nav-item">
     <a class="nav-link" href="{{ route('user.index') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Profile</span></a>
+      <span>Users</span></a>
   </li>
+
+
+
+
+
+      
+
+  
+  
+
+
   
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">

@@ -1,7 +1,7 @@
 <x-app-layout>
-    <x-slot name="header">
+<x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            
         </h2>
     </x-slot>
 
@@ -10,15 +10,19 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in as seller!") }}
-                    <a class="nav-link" href="{{ route('product.index') }}"><br>Add a Tractor</a>
-                    
+                    <a id="addTractorLink" class="nav-link" href="{{ route('seller.index') }}"><br>Add a Tractor</a>
+                   
+
+
+
+
                
                 </div> 
             </div>
         </div>
     </div>
 
-
+    
 
     
 

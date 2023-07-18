@@ -1,12 +1,7 @@
-@extends('layout.app')
- 
-@section('title', 'Products')
-  
-@section('contents')
-
-    <h1 class="mb-0">Add Book</h1>
+<x-app-layout>
+    <h1 class="mb-0">Add Product</h1>
     <hr />
-    <form action="{{ route('product.store') }}" method="POST">
+    <form action="{{ route('seller.store') }}" method="POST">
         @csrf
         <div class="row mb-3">
             <div class="col">
@@ -31,4 +26,4 @@
             </div>
         </div>
     </form>
-    @endsection
+</x-app-layout>

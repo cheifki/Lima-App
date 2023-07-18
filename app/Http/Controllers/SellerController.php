@@ -4,17 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 
-class ProductController extends Controller
+class SellerController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
+        
+
+
         $product = Product::orderBy('created_at', 'DESC')->get();
  
-        return view('product.index', compact('product'));
+        return view('seller.index', compact('product'));
     }
  
     /**
@@ -22,7 +26,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('product.create');
+        return view('seller.create');
     }
  
     /**
@@ -32,7 +36,7 @@ class ProductController extends Controller
     {
         Product::create($request->all());
  
-        return redirect()->route('product.index')->with('success', 'Product added successfully');
+        return redirect()->route('seller.index')->with('success', 'Product added successfully');
     }
  
     /**
@@ -42,7 +46,7 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
  
-        return view('product.show', compact('product'));
+        return view('seller.show', compact('product'));
     }
  
     /**
@@ -52,7 +56,7 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
  
-        return view('product.edit', compact('product'));
+        return view('seller.edit', compact('product'));
     }
  
     /**
@@ -64,7 +68,7 @@ class ProductController extends Controller
  
         $product->update($request->all());
  
-        return redirect()->route('product.index')->with('success', 'product updated successfully');
+        return redirect()->route('seller.index')->with('success', 'product updated successfully');
     }
  
     /**
@@ -76,7 +80,7 @@ class ProductController extends Controller
  
         $product->delete();
  
-        return redirect()->route('product.index')->with('success', 'product deleted successfully');
+        return redirect()->route('seller.index')->with('success', 'product deleted successfully');
     }
 
     
